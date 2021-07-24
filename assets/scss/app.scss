@@ -1,2 +1,6 @@
 @import 'base/reset';
 @import 'base/variable.scss';
+
+@import 'utils/borderMixin';
+@import 'utils/position';
+@import 'utils/breakPoint';
