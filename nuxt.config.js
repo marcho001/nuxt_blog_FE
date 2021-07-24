@@ -14,7 +14,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['./assets/scss/app.scss'],
+  css: ['~assets/scss/app.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -26,7 +26,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
-    // '@nuxtjs/style-resources',
+    '@nuxtjs/style-resources',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -43,9 +43,12 @@ export default {
   build: {},
   styleResources: {
     scss: [
-      './assets/scss/base/_reset.scss',
-      './assets/scss/base/_variables.scss',
+      // './assets/scss/base/_reset.scss',
+      // './assets/scss/base/_variables.scss',
+      './assets/scss/base/*.scss',
+      './assets/scss/utils/*.scss',
     ],
+    hoistUseStatements: true,
   },
 
   serverMiddleware: [{ path: '/api', handler: '~/server/api.js' }],
